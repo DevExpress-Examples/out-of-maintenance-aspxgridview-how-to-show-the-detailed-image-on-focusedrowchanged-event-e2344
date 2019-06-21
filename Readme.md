@@ -5,6 +5,9 @@
 * [Default.aspx.cs](./CS/WebSite/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebSite/Default.aspx.vb))
 <!-- default file list end -->
 # ASPxGridView - how to show the detailed image on FocusedRowChanged event
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e2344/)**
+<!-- run online end -->
 
 
 <p>This example illustrates how to dynamically display a focused employee's photo and details outside the ASPxGridView.</p><p>The FocusedRowChanged event is handled to call the OnGridFocusedRowChanged() function. This function queries the server to return the employee's ID, Notes, Country and City. The returned array is passed to the OnGetRowValues() function that specifies values for corresponding HTML elements.</p><p><strong>See Also:</strong><br />
