@@ -26,7 +26,7 @@ Partial Public Class _Default
 	Private Sub WriteBinaryImage(ByVal image() As Byte)
 		If image IsNot Nothing Then
 			Response.ContentType = "image/bmp"
-			Using ms As New MemoryStream(image)
+			Using ms As New MemoryStream(image, 78, image.Length - 78)
 				Using bmp As Bitmap = CType(Bitmap.FromStream(ms), Bitmap)
 					bmp.Save(Response.OutputStream, ImageFormat.Jpeg)
 				End Using

@@ -4,7 +4,7 @@
 * [Default.aspx](./CS/WebSite/Default.aspx) (VB: [Default.aspx](./VB/WebSite/Default.aspx))
 * [Default.aspx.cs](./CS/WebSite/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebSite/Default.aspx.vb))
 <!-- default file list end -->
-# ASPxGridView - How to show the detailed image on FocusedRowChanged event
+# ASPxGridView - how to show the detailed image on FocusedRowChanged event
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/e2344/)**
 <!-- run online end -->
