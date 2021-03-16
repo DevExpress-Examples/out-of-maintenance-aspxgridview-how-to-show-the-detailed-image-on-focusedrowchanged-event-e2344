@@ -25,7 +25,7 @@ public partial class _Default : System.Web.UI.Page
     void WriteBinaryImage(byte[] image)  {
         if (image != null) {
             Response.ContentType = "image/bmp";
-            using (MemoryStream ms = new MemoryStream(image, 78, image.Length - 78)) {
+            using (MemoryStream ms = new MemoryStream(image)) {
                 using (Bitmap bmp = (Bitmap)Bitmap.FromStream(ms)) {
                     bmp.Save(Response.OutputStream, ImageFormat.Jpeg);
                 }
