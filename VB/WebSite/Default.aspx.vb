@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Web
@@ -13,8 +12,9 @@ Imports System.Data.SqlClient
 
 Partial Public Class _Default
 	Inherits System.Web.UI.Page
+
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
-		If (Not String.IsNullOrEmpty(Request.Params("Photo"))) Then
+		If Not String.IsNullOrEmpty(Request.Params("Photo")) Then
 			PostImage(Request.Params("Photo"))
 		End If
 	End Sub
