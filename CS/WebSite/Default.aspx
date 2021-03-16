@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
-<%@ Register assembly="DevExpress.Web.v13.1, Version=13.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxGridView" tagprefix="dx" %>
-<%@ Register assembly="DevExpress.Web.v13.1, Version=13.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -42,6 +41,8 @@
                 <dx:GridViewDataTextColumn FieldName="City" VisibleIndex="5">
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="Country" VisibleIndex="7">
+                </dx:GridViewDataTextColumn>
+		<dx:GridViewDataTextColumn FieldName="Notes" VisibleIndex="8" Visible="false">
                 </dx:GridViewDataTextColumn>
             </Columns>
             <SettingsBehavior AllowFocusedRow="True"/>
