@@ -42,7 +42,7 @@
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="Country" VisibleIndex="7">
                 </dx:GridViewDataTextColumn>
-				<dx:GridViewDataTextColumn FieldName="Notes" VisibleIndex="8" Visible="false">
+		<dx:GridViewDataTextColumn FieldName="Notes" VisibleIndex="8" Visible="false">
                 </dx:GridViewDataTextColumn>
             </Columns>
             <SettingsBehavior AllowFocusedRow="True"/>
