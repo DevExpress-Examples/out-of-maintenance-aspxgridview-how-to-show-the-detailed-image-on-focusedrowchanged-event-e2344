@@ -25,13 +25,10 @@ Partial Public Class _Default
 	End Sub
 	Private Sub WriteBinaryImage(ByVal image() As Byte)
 		If image IsNot Nothing Then
-			Response.ContentType = "image/bmp"
-			Using ms As New MemoryStream(image)
-				Using bmp As Bitmap = CType(Bitmap.FromStream(ms), Bitmap)
-					bmp.Save(Response.OutputStream, ImageFormat.Jpeg)
-				End Using
-				Response.BinaryWrite(image)
-			End Using
+			Response.ContentType = "image/jpeg"
+			Dim imageConverter As ImageConverter = New ImageConverter()
+			Dim result As System.Drawing.Image = TryCast(imageConverter.ConvertFrom(image), System.Drawing.Image)
+			result.Save(Response.OutputStream, ImageFormat.Jpeg)
 		Else
 			Response.ContentType = "image/gif"
 		End If
