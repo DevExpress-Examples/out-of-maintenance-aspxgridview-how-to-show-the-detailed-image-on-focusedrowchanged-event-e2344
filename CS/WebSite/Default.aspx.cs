@@ -24,14 +24,10 @@ public partial class _Default : System.Web.UI.Page
     }
     void WriteBinaryImage(byte[] image)  {
         if (image != null) {
-            Response.ContentType = "image/bmp";
-            using (MemoryStream ms = new MemoryStream(image)) {
-                ms.Position = 0;
-                using (Bitmap bmp = (Bitmap)Bitmap.FromStream(ms)) {
-                    bmp.Save(Response.OutputStream, ImageFormat.Jpeg);
-                }
-                Response.BinaryWrite(image);
-            }
+            Response.ContentType = "image/jpeg";
+            ImageConverter imageConverter = new ImageConverter();
+            System.Drawing.Image result = imageConverter.ConvertFrom(image) as System.Drawing.Image;
+            result.Save(Response.OutputStream, ImageFormat.Jpeg);
         }
         else {
             Response.ContentType = "image/gif";
